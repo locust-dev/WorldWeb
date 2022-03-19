@@ -8,17 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		1947AE4E27E5266300A1C6B8 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1947AE4D27E5266300A1C6B8 /* NetworkExtension.framework */; };
+		195708EB27E5D40D00050687 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195708EA27E5D40D00050687 /* KeychainService.swift */; };
+		1957092F27E605E400050687 /* VPNConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957092E27E605E400050687 /* VPNConfiguration.swift */; };
+		1957093127E611B900050687 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957093027E611B900050687 /* DispatchQueue.swift */; };
+		1957094927E625E700050687 /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957094227E625E700050687 /* MainScreenPresenter.swift */; };
+		1957094A27E625E700050687 /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957094327E625E700050687 /* MainScreenRouter.swift */; };
+		1957094C27E625E700050687 /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957094527E625E700050687 /* MainScreenAssembly.swift */; };
+		1957094D27E625E700050687 /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957094627E625E700050687 /* MainScreenInteractor.swift */; };
+		1957095327E6261F00050687 /* ModuleTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957095027E6261F00050687 /* ModuleTransitionHandler.swift */; };
+		1957095427E6261F00050687 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957095127E6261F00050687 /* Assembly.swift */; };
+		1957095527E6261F00050687 /* TransitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957095227E6261F00050687 /* TransitionModel.swift */; };
+		1957095727E6267B00050687 /* ViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957095627E6267B00050687 /* ViewOutput.swift */; };
+		1957095D27E62CDF00050687 /* NEVPNStatus+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957095C27E62CDF00050687 /* NEVPNStatus+Description.swift */; };
 		19B9887C27E51AB6009E3C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9887B27E51AB6009E3C4B /* AppDelegate.swift */; };
 		19B9888027E51AB6009E3C4B /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9887F27E51AB6009E3C4B /* MainScreenViewController.swift */; };
 		19B9888627E51AB6009E3C4B /* WorldWeb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19B9888427E51AB6009E3C4B /* WorldWeb.xcdatamodeld */; };
 		19B9888827E51AB7009E3C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B9888727E51AB7009E3C4B /* Assets.xcassets */; };
 		19B9888B27E51AB7009E3C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B9888927E51AB7009E3C4B /* LaunchScreen.storyboard */; };
-		19B9889327E51D53009E3C4B /* VPNHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9889227E51D53009E3C4B /* VPNHandler.swift */; };
+		19B9889327E51D53009E3C4B /* VPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9889227E51D53009E3C4B /* VPNService.swift */; };
+		B7AEC02732291E3FE417C533 /* Pods_WorldWeb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05323F834B77F663D5FC69DE /* Pods_WorldWeb.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05323F834B77F663D5FC69DE /* Pods_WorldWeb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldWeb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1947AE4B27E5266300A1C6B8 /* WorldWeb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorldWeb.entitlements; sourceTree = "<group>"; };
 		1947AE4D27E5266300A1C6B8 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		195708EA27E5D40D00050687 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		1957092E27E605E400050687 /* VPNConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNConfiguration.swift; sourceTree = "<group>"; };
+		1957093027E611B900050687 /* DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		1957094227E625E700050687 /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
+		1957094327E625E700050687 /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		1957094527E625E700050687 /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
+		1957094627E625E700050687 /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
+		1957095027E6261F00050687 /* ModuleTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTransitionHandler.swift; sourceTree = "<group>"; };
+		1957095127E6261F00050687 /* Assembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		1957095227E6261F00050687 /* TransitionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionModel.swift; sourceTree = "<group>"; };
+		1957095627E6267B00050687 /* ViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOutput.swift; sourceTree = "<group>"; };
+		1957095C27E62CDF00050687 /* NEVPNStatus+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEVPNStatus+Description.swift"; sourceTree = "<group>"; };
 		19B9887827E51AB6009E3C4B /* WorldWeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldWeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B9887B27E51AB6009E3C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B9887F27E51AB6009E3C4B /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +52,9 @@
 		19B9888727E51AB7009E3C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19B9888A27E51AB7009E3C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B9888C27E51AB7009E3C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19B9889227E51D53009E3C4B /* VPNHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNHandler.swift; sourceTree = "<group>"; };
+		19B9889227E51D53009E3C4B /* VPNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNService.swift; sourceTree = "<group>"; };
+		D4421708FB6F54D933957EFD /* Pods-WorldWeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldWeb.debug.xcconfig"; path = "Target Support Files/Pods-WorldWeb/Pods-WorldWeb.debug.xcconfig"; sourceTree = "<group>"; };
+		E1AB15D774D455DF12731498 /* Pods-WorldWeb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldWeb.release.xcconfig"; path = "Target Support Files/Pods-WorldWeb/Pods-WorldWeb.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1947AE4E27E5266300A1C6B8 /* NetworkExtension.framework in Frameworks */,
+				B7AEC02732291E3FE417C533 /* Pods_WorldWeb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,8 +74,76 @@
 			isa = PBXGroup;
 			children = (
 				1947AE4D27E5266300A1C6B8 /* NetworkExtension.framework */,
+				05323F834B77F663D5FC69DE /* Pods_WorldWeb.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		195708EC27E5D44100050687 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				19B9887B27E51AB6009E3C4B /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		195708ED27E5D44900050687 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				195708EF27E5D49800050687 /* VPN */,
+				195708EE27E5D44E00050687 /* Keychain */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		195708EE27E5D44E00050687 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				195708EA27E5D40D00050687 /* KeychainService.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		195708EF27E5D49800050687 /* VPN */ = {
+			isa = PBXGroup;
+			children = (
+				19B9889227E51D53009E3C4B /* VPNService.swift */,
+				1957092E27E605E400050687 /* VPNConfiguration.swift */,
+			);
+			path = VPN;
+			sourceTree = "<group>";
+		};
+		195708F027E5D49F00050687 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				195708F127E5D4A400050687 /* MainScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		195708F127E5D4A400050687 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1957094527E625E700050687 /* MainScreenAssembly.swift */,
+				1957094227E625E700050687 /* MainScreenPresenter.swift */,
+				1957094627E625E700050687 /* MainScreenInteractor.swift */,
+				19B9887F27E51AB6009E3C4B /* MainScreenViewController.swift */,
+				1957094327E625E700050687 /* MainScreenRouter.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		1957094027E625CE00050687 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1957095C27E62CDF00050687 /* NEVPNStatus+Description.swift */,
+				1957095627E6267B00050687 /* ViewOutput.swift */,
+				1957095127E6261F00050687 /* Assembly.swift */,
+				1957095027E6261F00050687 /* ModuleTransitionHandler.swift */,
+				1957095227E6261F00050687 /* TransitionModel.swift */,
+				1957093027E611B900050687 /* DispatchQueue.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		19B9886F27E51AB6009E3C4B = {
@@ -55,6 +152,7 @@
 				19B9887A27E51AB6009E3C4B /* WorldWeb */,
 				19B9887927E51AB6009E3C4B /* Products */,
 				1947AE4C27E5266300A1C6B8 /* Frameworks */,
+				1E58D7F29855428C9BC9C3A0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,16 +167,26 @@
 		19B9887A27E51AB6009E3C4B /* WorldWeb */ = {
 			isa = PBXGroup;
 			children = (
-				1947AE4B27E5266300A1C6B8 /* WorldWeb.entitlements */,
-				19B9887B27E51AB6009E3C4B /* AppDelegate.swift */,
-				19B9889227E51D53009E3C4B /* VPNHandler.swift */,
-				19B9887F27E51AB6009E3C4B /* MainScreenViewController.swift */,
+				195708EC27E5D44100050687 /* AppDelegate */,
+				195708ED27E5D44900050687 /* Services */,
+				1957094027E625CE00050687 /* Extensions */,
+				195708F027E5D49F00050687 /* Modules */,
 				19B9888727E51AB7009E3C4B /* Assets.xcassets */,
 				19B9888927E51AB7009E3C4B /* LaunchScreen.storyboard */,
+				1947AE4B27E5266300A1C6B8 /* WorldWeb.entitlements */,
 				19B9888C27E51AB7009E3C4B /* Info.plist */,
 				19B9888427E51AB6009E3C4B /* WorldWeb.xcdatamodeld */,
 			);
 			path = WorldWeb;
+			sourceTree = "<group>";
+		};
+		1E58D7F29855428C9BC9C3A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4421708FB6F54D933957EFD /* Pods-WorldWeb.debug.xcconfig */,
+				E1AB15D774D455DF12731498 /* Pods-WorldWeb.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19B9888F27E51AB7009E3C4B /* Build configuration list for PBXNativeTarget "WorldWeb" */;
 			buildPhases = (
+				CE8B821870D38E6D36F68482 /* [CP] Check Pods Manifest.lock */,
 				19B9887427E51AB6009E3C4B /* Sources */,
 				19B9887527E51AB6009E3C4B /* Frameworks */,
 				19B9887627E51AB6009E3C4B /* Resources */,
+				8DF9BBB3BA0FF234A09327E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,15 +256,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8DF9BBB3BA0FF234A09327E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldWeb/Pods-WorldWeb-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldWeb/Pods-WorldWeb-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldWeb/Pods-WorldWeb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE8B821870D38E6D36F68482 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WorldWeb-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		19B9887427E51AB6009E3C4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				19B9888027E51AB6009E3C4B /* MainScreenViewController.swift in Sources */,
-				19B9889327E51D53009E3C4B /* VPNHandler.swift in Sources */,
+				1957094D27E625E700050687 /* MainScreenInteractor.swift in Sources */,
+				1957094927E625E700050687 /* MainScreenPresenter.swift in Sources */,
+				1957095327E6261F00050687 /* ModuleTransitionHandler.swift in Sources */,
+				1957094A27E625E700050687 /* MainScreenRouter.swift in Sources */,
+				1957095D27E62CDF00050687 /* NEVPNStatus+Description.swift in Sources */,
+				19B9889327E51D53009E3C4B /* VPNService.swift in Sources */,
+				1957095727E6267B00050687 /* ViewOutput.swift in Sources */,
 				19B9887C27E51AB6009E3C4B /* AppDelegate.swift in Sources */,
+				195708EB27E5D40D00050687 /* KeychainService.swift in Sources */,
+				1957095427E6261F00050687 /* Assembly.swift in Sources */,
 				19B9888627E51AB6009E3C4B /* WorldWeb.xcdatamodeld in Sources */,
+				1957095527E6261F00050687 /* TransitionModel.swift in Sources */,
+				1957094C27E625E700050687 /* MainScreenAssembly.swift in Sources */,
+				1957093127E611B900050687 /* DispatchQueue.swift in Sources */,
+				1957092F27E605E400050687 /* VPNConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +452,7 @@
 		};
 		19B9889027E51AB7009E3C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4421708FB6F54D933957EFD /* Pods-WorldWeb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +483,7 @@
 		};
 		19B9889127E51AB7009E3C4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1AB15D774D455DF12731498 /* Pods-WorldWeb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
