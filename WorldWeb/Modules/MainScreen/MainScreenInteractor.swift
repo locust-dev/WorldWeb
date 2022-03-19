@@ -11,7 +11,7 @@ protocol MainScreenInteractorInput {
     var isDisconnected: Bool { get }
     var statusDescription: String { get }
     
-    func connect(configuration: VPNConfiguration)
+    func connect()
     func disconnect()
 }
 
@@ -44,8 +44,8 @@ extension MainScreenInteractor: MainScreenInteractorInput {
         vpnService.status.description
     }
     
-    func connect(configuration: VPNConfiguration) {
-        vpnService.connect(configuration: configuration)
+    func connect() {
+        vpnService.connect()
     }
     
     func disconnect() {

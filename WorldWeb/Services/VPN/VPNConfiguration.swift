@@ -5,13 +5,10 @@
 //  Created by Ilya Turin on 19.03.2022.
 //
 
-import NetworkExtension
-
-struct VPNConfiguration {
+struct VPNConfiguration: Decodable {
     
-    let serverAddress = "46.102.156.27"
-    let username = "vpnuser"
-    let password = "yeGTjTybh52k7YJP"
-    let sharedKey = "SWnzjYP4VfxUnXa6TNwU"
-    let authMethod: NEVPNIKEAuthenticationMethod = .sharedSecret
+    let serverAdress: String
+    let username: String
+    let password: String
+    let sharedKey: String
 }

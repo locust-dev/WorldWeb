@@ -13,7 +13,7 @@ protocol VPNServiceInput {
     var status: NEVPNStatus { get }
     var isDisconnected: Bool { get }
     
-    func connect(configuration: VPNConfiguration)
+    func connect()
     func disconnect()
 }
 
@@ -35,14 +35,14 @@ final class VPNService {
     
     private let manager = NEVPNManager.shared()
     private let keychainService: KeychainServiceInput
+    private let receiver: VPNDataReceiverInput
     
     
     // MARK: - Init
     
     private init() {
         keychainService = KeychainService()
-        
-        print(CFNetworkCopySystemProxySettings())
+        receiver = VPNDataReceiver()
     }
 }
 
@@ -62,19 +62,29 @@ extension VPNService: VPNServiceInput {
         }
     }
     
-    func connect(configuration: VPNConfiguration) {
+    func connect() {
         
-        load {
-            let protocolConfiguration = self.configureProtocol(configuration)
-            self.manager.protocolConfiguration = protocolConfiguration
-            self.manager.localizedDescription = Locals.localizedDescription
-            self.manager.isEnabled = true
-            self.save {
-                self.load {
-                    self.startVPNTunnel()
+        fetchConfiguration { [weak self] configuration in
+            
+            guard let configuration = configuration else {
+                // TODO: - Обработать
+                return
+            }
+            
+            self?.load {
+                
+                let protocolConfiguration = self?.configureProtocol(configuration)
+                self?.manager.protocolConfiguration = protocolConfiguration
+                self?.manager.localizedDescription = Locals.localizedDescription
+                self?.manager.isEnabled = true
+                self?.save {
+                    self?.load {
+                        self?.startVPNTunnel()
+                    }
                 }
             }
         }
+        
     }
     
     func disconnect() {
@@ -86,12 +96,28 @@ extension VPNService: VPNServiceInput {
 // MARK: - Private methods
 extension VPNService {
     
+    private func fetchConfiguration(completion: @escaping (VPNConfiguration?) -> Void) {
+        
+        receiver.fetchConfiguration { result in
+            
+            switch result {
+                
+            case .success(let configuration):
+                completion(configuration)
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
+            }
+        }
+    }
+    
     private func configureProtocol(_ configuration: VPNConfiguration) -> NEVPNProtocolIPSec {
         
         let vpnProtocol = NEVPNProtocolIPSec()
         vpnProtocol.username = configuration.username
-        vpnProtocol.serverAddress = configuration.serverAddress
-        vpnProtocol.authenticationMethod = configuration.authMethod
+        vpnProtocol.serverAddress = configuration.serverAdress
+        vpnProtocol.authenticationMethod = .sharedSecret
         
         keychainService.save(key: Locals.passwordReferenceKey, value: configuration.password)
         keychainService.save(key: Locals.pskReferenceKey, value: configuration.sharedKey)

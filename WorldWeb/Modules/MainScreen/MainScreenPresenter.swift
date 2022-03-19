@@ -6,6 +6,8 @@
 //  Copyright © 2022 FINCH. All rights reserved.
 //
 
+import Foundation
+
 protocol MainScreenViewOutput: ViewOutput {
     func didTapMainButton()
     func vpnStatusDidChange()
@@ -32,13 +34,32 @@ extension MainScreenPresenter: MainScreenViewOutput {
         
         // MARK: - Решение
         view?.updateStatusLabel("Нажмите, чтобы подключиться")
+        
+//        let url = ""
+//        let params: [String: Any] = [
+//            "email": "rrrr.ty30@gmail.com"
+//        ]
+//
+//        struct ConfigurationData: Decodable {
+//            let server: String
+//            let pass: String
+//            let psk: String
+//        }
+//
+//
+//        AF.request(url, method: .post, parameters: params, encoding: JSONEncoding.default)
+//            .validate()
+//            .responseJSON { data in
+//
+//
+//        }
+        
     }
     
     func didTapMainButton() {
         
         if interactor?.isDisconnected == true {
-            let configuration = VPNConfiguration()
-            interactor?.connect(configuration: configuration)
+            interactor?.connect()
             
         } else {
             interactor?.disconnect()
