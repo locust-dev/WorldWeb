@@ -52,6 +52,7 @@
 		19B9888827E51AB7009E3C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B9888727E51AB7009E3C4B /* Assets.xcassets */; };
 		19B9888B27E51AB7009E3C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B9888927E51AB7009E3C4B /* LaunchScreen.storyboard */; };
 		19B9889327E51D53009E3C4B /* VPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9889227E51D53009E3C4B /* VPNService.swift */; };
+		19C785DB28022D0D00E1B4ED /* UISwitch+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C785DA28022D0D00E1B4ED /* UISwitch+Size.swift */; };
 		B7AEC02732291E3FE417C533 /* Pods_WorldWeb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05323F834B77F663D5FC69DE /* Pods_WorldWeb.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		19B9888A27E51AB7009E3C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B9888C27E51AB7009E3C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B9889227E51D53009E3C4B /* VPNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNService.swift; sourceTree = "<group>"; };
+		19C785DA28022D0D00E1B4ED /* UISwitch+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+Size.swift"; sourceTree = "<group>"; };
 		D4421708FB6F54D933957EFD /* Pods-WorldWeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldWeb.debug.xcconfig"; path = "Target Support Files/Pods-WorldWeb/Pods-WorldWeb.debug.xcconfig"; sourceTree = "<group>"; };
 		E1AB15D774D455DF12731498 /* Pods-WorldWeb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldWeb.release.xcconfig"; path = "Target Support Files/Pods-WorldWeb/Pods-WorldWeb.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +199,7 @@
 				1957095227E6261F00050687 /* TransitionModel.swift */,
 				1957093027E611B900050687 /* DispatchQueue.swift */,
 				1901342A27E685C600FB828A /* ErrorModel.swift */,
+				19C785DA28022D0D00E1B4ED /* UISwitch+Size.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				19B9888027E51AB6009E3C4B /* MainScreenViewController.swift in Sources */,
 				1957094D27E625E700050687 /* MainScreenInteractor.swift in Sources */,
 				1957094927E625E700050687 /* MainScreenPresenter.swift in Sources */,
+				19C785DB28022D0D00E1B4ED /* UISwitch+Size.swift in Sources */,
 				1957095327E6261F00050687 /* ModuleTransitionHandler.swift in Sources */,
 				1957094A27E625E700050687 /* MainScreenRouter.swift in Sources */,
 				1957095D27E62CDF00050687 /* NEVPNStatus+Description.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MainScreenViewOutput: ViewOutput {
-    func didTapMainButton()
+    func didTapSwitcher()
     func vpnStatusDidChange()
 }
 
@@ -56,7 +56,7 @@ extension MainScreenPresenter: MainScreenViewOutput {
         
     }
     
-    func didTapMainButton() {
+    func didTapSwitcher() {
         
         if interactor?.isDisconnected == true {
             interactor?.connect()

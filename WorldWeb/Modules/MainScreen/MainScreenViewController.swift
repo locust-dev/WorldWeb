@@ -18,7 +18,7 @@ final class MainScreenViewController: UIViewController {
     
     var presenter: MainScreenViewOutput?
     
-    private let mainButton = UIButton()
+    private let switcher = UISwitch()
     private let statusLabel = UILabel()
     
     
@@ -46,28 +46,27 @@ final class MainScreenViewController: UIViewController {
         
         view.backgroundColor = .black
         
+        switcher.setSize(width: 120)
+        switcher.onTintColor = .blue
+        switcher.addTarget(self, action: #selector(switchTap(_:)), for: .valueChanged)
+        
         statusLabel.textColor = .white
         statusLabel.font = UIFont.systemFont(ofSize: 20)
-        
-        mainButton.addTarget(self, action: #selector(mainButtonTap), for: .touchUpInside)
-        mainButton.layer.cornerRadius = 50
-        mainButton.backgroundColor = .purple
-        
-        view.addSubview(mainButton)
+    
+        view.addSubview(switcher)
         view.addSubview(statusLabel)
         
-        mainButton.autoSetDimensions(to: CGSize(width: 100, height: 100))
-        mainButton.autoCenterInSuperview()
+        switcher.autoCenterInSuperview()
         
-        statusLabel.autoPinEdge(.top, to: .bottom, of: mainButton, withOffset: 20)
-        statusLabel.autoAlignAxis(.vertical, toSameAxisOf: mainButton)
+        statusLabel.autoPinEdge(.top, to: .bottom, of: switcher, withOffset: 50)
+        statusLabel.autoAlignAxis(.vertical, toSameAxisOf: switcher)
     }
     
     
     // MARK: - Actions
     
-    @objc private func mainButtonTap() {
-        presenter?.didTapMainButton()
+    @objc private func switchTap(_: UISwitch) {
+        presenter?.didTapSwitcher()
     }
     
     @objc private func vpnStatusDidChange(_: NSNotification?) {
@@ -83,5 +82,4 @@ extension MainScreenViewController: MainScreenViewInput {
     func updateStatusLabel(_ statusText: String?) {
         statusLabel.text = statusText
     }
-
 }
