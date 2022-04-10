@@ -27,20 +27,20 @@ final class VPNDataReceiver: VPNDataReceiverInput {
         let params: [String: Any] = [
             "email": email
         ]
-        
+
         AF.request(url, method: .post, parameters: params, encoding: JSONEncoding.default)
             .validate()
             .responseJSON { data in
-                
+
                 guard let data = data.data else {
                     completion(.failure(.serverError))
                     return
                 }
-                
+
                 do {
                     let configuration = try JSONDecoder().decode(VPNConfiguration.self, from: data)
                     completion(.success(configuration))
-                    
+
                 } catch let error {
                     print(error.localizedDescription)
                     completion(.failure(.serverError))

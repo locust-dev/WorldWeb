@@ -114,10 +114,12 @@ extension VPNService {
     
     private func configureProtocol(_ configuration: VPNConfiguration) -> NEVPNProtocolIPSec {
         
-        let vpnProtocol = NEVPNProtocolIPSec()
+        let vpnProtocol = NEVPNProtocolIKEv2()
         vpnProtocol.username = configuration.username
         vpnProtocol.serverAddress = configuration.serverAdress
-        vpnProtocol.authenticationMethod = .sharedSecret
+        vpnProtocol.remoteIdentifier = configuration.serverAdress
+        vpnProtocol.authenticationMethod = .certificate
+    
         
         keychainService.save(key: Locals.passwordReferenceKey, value: configuration.password)
         keychainService.save(key: Locals.pskReferenceKey, value: configuration.sharedKey)

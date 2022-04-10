@@ -48,7 +48,7 @@ final class MainScreenViewController: UIViewController {
         
         switcher.setSize(width: 120)
         switcher.onTintColor = .blue
-        switcher.addTarget(self, action: #selector(switchTap(_:)), for: .valueChanged)
+        switcher.addTarget(self, action: #selector(switchTap(switcher:)), for: .valueChanged)
         
         statusLabel.textColor = .white
         statusLabel.font = UIFont.systemFont(ofSize: 20)
@@ -65,7 +65,7 @@ final class MainScreenViewController: UIViewController {
     
     // MARK: - Actions
     
-    @objc private func switchTap(_: UISwitch) {
+    @objc private func switchTap(switcher: UISwitch) {
         presenter?.didTapSwitcher()
     }
     
